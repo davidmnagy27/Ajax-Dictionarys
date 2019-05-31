@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax PP</title>
+</head>
+<body>
+
+<select id="dropdown">
+    <option value="jquery">jquery</option>
+    <option value="javascript">javascript</option>
+    <option value="java">java</option>
+    <option value="html">html</option>
+    <option value="php">php</option>
+</select>
+
+<button id ="search">Search</button>
+
+
+<div id ="output"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script>
+    $("#search").on('click',function(){
+        $("#output").load('ajax.php', {choice:$('#dropdown').val()});
+    });
+
+
+
+
+</script>
+
+</body>
+</html>
